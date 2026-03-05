@@ -1,0 +1,164 @@
+/* Custom utility classes specifically used in Cart Sidebar that we haven't defined globally yet (to augment what we have) */
+.w-full {
+    width: 100%;
+}
+
+.w-4 {
+    width: 1rem;
+}
+
+.h-full {
+    height: 100%;
+}
+
+.flex-1 {
+    flex: 1;
+}
+
+.overflow-y-auto {
+    overflow-y: auto;
+}
+
+.bg-secondary {
+    background-color: var(--bg-secondary);
+}
+
+.border-l {
+    border-left: 1px solid var(--border-color);
+}
+
+.border-b {
+    border-bottom: 1px solid var(--border-color);
+}
+
+.p-6 {
+    padding: 24px;
+}
+
+.p-2 {
+    padding: 8px;
+}
+
+.pl-2 {
+    padding-left: 8px;
+}
+
+.pt-4 {
+    padding-top: 16px;
+}
+
+.mb-4 {
+    margin-bottom: 16px;
+}
+
+.mb-2 {
+    margin-bottom: 8px;
+}
+
+.mb-1 {
+    margin-bottom: 4px;
+}
+
+.mt-2 {
+    margin-top: 8px;
+}
+
+.text-xl {
+    font-size: 1.25rem;
+}
+
+.text-xs {
+    font-size: 0.75rem;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.font-semibold {
+    font-weight: 600;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.items-start {
+    align-items: flex-start;
+}
+
+.block {
+    display: block;
+}
+
+.border-color {
+    border-color: var(--border-color);
+}
+
+.border-brand-primary {
+    border-color: var(--brand-primary);
+}
+
+.text-brand-primary {
+    color: var(--brand-primary);
+}
+
+.bg-brand-secondary {
+    background-color: var(--brand-secondary);
+}
+
+.rounded-full {
+    border-radius: 9999px;
+}
+
+.border-l-2 {
+    border-left-width: 2px;
+    border-left-style: solid;
+}
+
+.border-opacity-30 {
+    border-color: rgba(194, 65, 12, 0.3);
+    /* brand-primary with opacity */
+}
+
+.qty-btn {
+    background: white;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    color: var(--text-primary);
+    box-shadow: var(--shadow-sm);
+    transition: all var(--transition-fast);
+}
+
+.qty-btn:hover {
+    background-color: var(--bg-primary);
+    transform: scale(1.05);
+}
+
+.qty-btn:active {
+    transform: scale(0.95);
+}
+
+/* Ensure nice scrollbar for cart items */
+.cart-items::-webkit-scrollbar {
+    width: 6px;
+}
+
+.cart-items::-webkit-scrollbar-track {
+    background: var(--bg-secondary);
+}
+
+.cart-items::-webkit-scrollbar-thumb {
+    background-color: var(--border-color);
+    border-radius: 20px;
+}

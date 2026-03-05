@@ -1,0 +1,37 @@
+.ui-badge {
+    display: inline-flex;
+    align-items: center;
+    border-radius: var(--radius-full);
+    padding: 2px 10px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: capitalize;
+    line-height: 1.5;
+}
+
+.ui-badge--default {
+    background-color: var(--bg-accent);
+    color: var(--text-secondary);
+}
+
+.ui-badge--success {
+    background-color: #d1fae5;
+    color: #065f46;
+}
+
+.ui-badge--warning {
+    background-color: #fef3c7;
+    color: #92400e;
+}
+
+.ui-badge--error {
+    background-color: #fee2e2;
+    color: #b91c1c;
+}
+
+.ui-badge--info {
+    background-color: #dbeafe;
+    color: #1e40af;
+}
+
+/* Dark mode overrides would go here if implemented */

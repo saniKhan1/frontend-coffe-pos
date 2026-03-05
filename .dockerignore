@@ -1,0 +1,16 @@
+__pycache__/
+*.pyc
+*.pyo
+.env
+.venv/
+logs/
+docs/_build/
+*.egg-info/
+dist/
+.ruff_cache/
+.mypy_cache/
+.pytest_cache/
+
+# Ignore .db files at root but allow seeded database in data/
+/*.db
+!data/philo_coffee.db

@@ -1,0 +1,27 @@
+# Philo Coffee Shop POS API - Docker Compose
+# Usage: docker compose up -d
+# Note: Seeded database is included in the image
+
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: mrqadeer/philo-coffee-shop:latest
+    container_name: philo-coffee-shop
+    ports:
+      - "8000:8000"
+    environment:
+      - APP_NAME=Philo Coffee Shop
+      - DATABASE_URL=sqlite:///./data/philo_coffee.db
+      - TAX_RATE=0.08
+      - LOG_LEVEL=INFO
+      - CORS_ORIGINS=["*"]
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/health')"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
+    driver: local

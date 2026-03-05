@@ -1,0 +1,42 @@
+[project]
+name = "philo-coffee-shop"
+version = "1.0.0"
+description = "Philo Coffee Shop - A full-featured POS (Point of Sale) backend API built with FastAPI and SQLite"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi>=0.115.0",
+    "uvicorn[standard]>=0.32.0",
+    "sqlalchemy>=2.0.36",
+    "alembic>=1.14.0",
+    "pydantic-settings>=2.6.0",
+    "pydantic[email]>=2.10.0",
+    "aiosqlite>=0.20.0",
+    "python-dotenv>=1.0.1",
+]
+
+[project.scripts]
+philo = "app.main:run"
+
+[dependency-groups]
+dev = [
+    "sphinx>=8.1.0",
+    "sphinx-rtd-theme>=3.0.0",
+    "pydata-sphinx-theme>=0.16.1",
+    "sphinx-copybutton>=0.5.2",
+    "pytest>=8.3.0",
+    "pytest-asyncio>=0.24.0",
+    "httpx>=0.28.0",
+    "ruff>=0.8.0",
+]
+
+[tool.ruff]
+target-version = "py312"
+line-length = 120
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "N", "UP", "B", "SIM"]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"

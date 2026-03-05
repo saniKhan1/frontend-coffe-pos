@@ -1,0 +1,52 @@
+.error-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 48px 24px;
+    text-align: center;
+    background-color: #fef2f2;
+    border-radius: var(--radius-lg);
+    border: 1px dashed var(--danger);
+    margin: 24px 0;
+}
+
+.error-icon-wrapper {
+    color: var(--danger);
+    margin-bottom: 16px;
+    padding: 16px;
+    background-color: #fee2e2;
+    border-radius: var(--radius-full);
+}
+
+.error-state h3 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #991b1b;
+    margin-bottom: 8px;
+}
+
+.error-state p {
+    color: #b91c1c;
+    margin-bottom: 24px;
+    max-width: 400px;
+}
+
+.retry-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: var(--bg-secondary);
+    color: var(--text-primary);
+    border: 1px solid var(--border-color);
+    padding: 8px 16px;
+    border-radius: var(--radius-md);
+    font-weight: 500;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.retry-btn:hover {
+    background-color: var(--bg-accent);
+    border-color: var(--text-secondary);
+}
