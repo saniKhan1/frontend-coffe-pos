@@ -5,27 +5,28 @@
   --bg-primary: #f8fafc;
   --bg-secondary: #ffffff;
   --bg-accent: #e2e8f0;
-  
+
   --text-primary: #0f172a;
   --text-secondary: #475569;
   --text-inverse: #ffffff;
-  
-  --brand-primary: #c2410c; /* Coffee / Orange accent */
+
+  --brand-primary: #c2410c;
+  /* Coffee / Orange accent */
   --brand-primary-hover: #9a3412;
   --brand-secondary: #fcebeb;
-  
+
   --success: #10b981;
   --warning: #f59e0b;
   --danger: #ef4444;
   --info: #3b82f6;
 
   --border-color: #cbd5e1;
-  
+
   --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
   --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
   --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
   --shadow-brand: 0 4px 14px 0 rgba(194, 65, 12, 0.39);
-  
+
   --radius-sm: 0.375rem;
   --radius-md: 0.5rem;
   --radius-lg: 0.75rem;
@@ -40,10 +41,10 @@
   --bg-primary: #0f172a;
   --bg-secondary: #1e293b;
   --bg-accent: #334155;
-  
+
   --text-primary: #f8fafc;
   --text-secondary: #cbd5e1;
-  
+
   --border-color: #334155;
 }
 
@@ -88,8 +89,15 @@ button {
 
 /* Animations */
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .animate-fade-in {
@@ -97,8 +105,15 @@ button {
 }
 
 @keyframes pulse {
-  0%, 100% { opacity: 1; }
-  50% { opacity: .5; }
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: .5;
+  }
 }
 
 .animate-pulse {
@@ -116,4 +131,51 @@ button {
 .dark .glass-panel {
   background: rgba(30, 41, 59, 0.7);
   border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .app-layout {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100% !important;
+    height: auto !important;
+    border-right: none;
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  .sidebar-nav {
+    flex-direction: row;
+    overflow-x: auto;
+    padding: 12px;
+    gap: 12px;
+  }
+
+  .nav-item {
+    padding: 10px;
+    flex: 1;
+    justify-content: center;
+    white-space: nowrap;
+  }
+
+  .nav-item span {
+    display: none;
+    /* Hide text on small mobile if needed, or keep it */
+  }
+
+  .sidebar-header,
+  .sidebar-footer {
+    display: none;
+  }
+
+  .main-content {
+    height: calc(100vh - 72px);
+  }
+
+  .dashboard-content,
+  .page-header {
+    padding: 16px;
+  }
 }

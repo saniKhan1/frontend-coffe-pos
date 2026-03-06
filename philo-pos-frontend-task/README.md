@@ -145,5 +145,5 @@ tests/
 1. Deploy this frontend repo to [Vercel](https://vercel.com).
 2. During the setup (or in **Project Settings > Environment Variables**), add the following variable:
    - **Key**: `VITE_API_URL`
-   - **Value**: `https://philo-coffee-shop-production-dd93.up.railway.app.app/api/v1` (replace with your actual Railway URL).
+   - **Value**: `https://philo-coffee-shop-production-dd93.up.railway.app/api/v1` (replace with your actual Railway URL).
 3. Redeploy the frontend for the changes to take effect.
